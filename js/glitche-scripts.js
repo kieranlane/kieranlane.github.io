@@ -32,7 +32,9 @@ $(function () {
 			/* Typed subtitle */
 			$('.typed-subtitle').typed({
 				stringsElement: $('.typing-subtitle'),
-				loop: true
+				loop: true,
+				typeSpeed: 50,
+				backDelay: 1000
 			});
 			
 			/* Typed breadcrumbs */
@@ -54,21 +56,21 @@ $(function () {
 	$('header .top-menu, .typed-bread').on('click', 'a', function(){
 		var link = $(this).attr('href');
 		if(link.indexOf('#section-') == 0){
-			if(!$('body').hasClass('home')){
+			/* if(!$('body').hasClass('home')){
 				location.href = '/'+link;
-			}
+			} */
 
 			$('body, html').animate({scrollTop: $(link).offset().top - 110}, 400);
 			if($('header').hasClass('active')){
 				$('.menu-btn').trigger('click');
 			}
-		} else {
+		} /* else {
 			$('body').removeClass('loaded');
 			setTimeout(function() {
 				location.href = "" + link;
 			}, 500);
-		}
-		return false;
+		} */
+		/* return false; */
 	});
 	
 	/*Menu mobile*/
