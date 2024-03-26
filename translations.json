@@ -1,5 +1,7 @@
 {
     "common": {
-        "encryption_enabled": "Test123"
+        "encryption_enabled": {
+            "sv": "Test123"
+        }
     }
 }
